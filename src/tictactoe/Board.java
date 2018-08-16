@@ -7,6 +7,7 @@ import javafx.scene.paint.Color;
 /**
  * A TicTacToe board.
  * This class provides a view of the board.
+ * @author Narisa Singngam
  */
 public class Board extends GridPane  {
 	/** Size of squares on the board. */
@@ -29,6 +30,7 @@ public class Board extends GridPane  {
 		super.setGridLinesVisible(true);
 		super.setHgap(GAP);
 		super.setVgap(GAP);
+		
 		
 		for (int row = 0; row < board.length; row++) {
 			int y = row * TILESIZE;
