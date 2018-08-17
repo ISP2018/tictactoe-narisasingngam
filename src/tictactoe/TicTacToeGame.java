@@ -119,7 +119,7 @@ public class TicTacToeGame {
 		}
 		// Look for N matching pieces on upward diagonal
 		p = pieces[0][3].type; // start at lower-left corner
-		if (p != Player.NONE && p == pieces[0][3].type && p == pieces[3][0].type ) {
+		if (p != Player.NONE && p == pieces[0][3].type && p == pieces[3][0].type && p == pieces[1][2].type && p == pieces[2][1].type) {
 			// all pieces on diagonal occupied by same type (Player)
 			return p;
 		}
