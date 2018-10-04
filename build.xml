@@ -66,7 +66,7 @@
 <target name="compile" depends="init" description="Compile source code">
 	<javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false" />
 	 <!-- copy fxml files from src tree to build tree, including subdirs -->
-	    <copy todir="destination dir">
+	    <copy todir="${build.dir}">
 	       <fileset dir="${src.dir}">
 	          <include name="**/*.fxml" />
 	       </fileset>
