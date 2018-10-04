@@ -22,5 +22,3 @@ jdk:
 
 script:
   - ant tes
-
-os: osx
