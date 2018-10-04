@@ -1,5 +1,7 @@
 ## Tic-Tac-Toe
 
+[![Build Status](https://travis-ci.com/narisasingngam/tictactoe.svg?branch=master)](https://travis-ci.com/narisasingngam/tictactoe)
+
 ### Description
 
 A tic-tac-toe game written using JavaFX.
