@@ -101,6 +101,7 @@ public class TicTacToeGame {
 			// all pieces on this row belong to p
 			return p;
 		}
+	
 		// Look for N matching pieces on same column
 		coltest:
 		for(int col=0; col<boardsize; col++) {
@@ -111,18 +112,33 @@ public class TicTacToeGame {
 			}
 			return p;
 		}
+		
 		// Look for N matching pieces on downward diagonal.
 		Player p = pieces[0][0].type;
-		if (p != Player.NONE && p == pieces[1][1].type && p == pieces[2][2].type && p == pieces[3][3].type) {
-			// all pieces on diagonal occupied by same type (Player)
+		int countDownward = 0;
+		for(int i = 0 ; i < boardsize ; i++){
+			if(p != Player.NONE && p == pieces[i][i].type){
+				countDownward++;
+			}
+		}
+		if(countDownward == boardsize){
 			return p;
 		}
+		
 		// Look for N matching pieces on upward diagonal
-		p = pieces[0][3].type; // start at lower-left corner
-		if (p != Player.NONE && p == pieces[0][3].type && p == pieces[3][0].type && p == pieces[1][2].type && p == pieces[2][1].type) {
-			// all pieces on diagonal occupied by same type (Player)
+		int j = boardsize-1;
+		int countUpward = 0;
+		p = pieces[0][boardsize-1].type; // start at lower-left corner
+		for(int i = 0 ; i < boardsize ; i++){
+			if(p != Player.NONE && p == pieces[i][j].type){
+				j--;
+				countUpward++;
+			}
+		}
+		if(countUpward == boardsize){
 			return p;
 		}
+
 		return Player.NONE;
 	}
 	
